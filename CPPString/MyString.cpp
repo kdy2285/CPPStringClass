@@ -86,13 +86,17 @@ namespace MyStringClass
 		}
 
 		size_t count = mLength;
+		char* orginChar = mString;
+		char* rhsChar = rhs.mString;
 
 		while (count > 0)
 		{
-			if (*mString != *rhs.mString)
+			if (*orginChar != *rhsChar)
 			{
 				return false;
 			}
+			orginChar++;
+			rhsChar++;
 			count--;
 		}
 

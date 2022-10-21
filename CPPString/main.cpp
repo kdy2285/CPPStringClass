@@ -12,6 +12,9 @@ int main()
 
 	MyString str2(str1);
 	MyString str3 = "Writing ";
+	MyString str3_cpy = "Writing ";
+	MyString str3_cmp = "Writeol ";
+
 	MyString str4 = "print 10 and then 5 more";
 	MyString str5 = "world";
 	MyString str3_5Append = "Writing world";
@@ -25,6 +28,8 @@ int main()
 
 	str1.Reverse();
 	assert(str1 == str1Reverse);
+	assert(!(str3 == str3_cmp));
+	assert(str3 == str3_cpy);
 	assert(str3.Append(str5) == str3_5Append);
 
 	MyString sumOperation = str1 + str5;
